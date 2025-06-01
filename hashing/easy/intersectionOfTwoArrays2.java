@@ -1,12 +1,10 @@
 package hashing.easy;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
 public class intersectionOfTwoArrays2 {
-
     public static int[] commonElement(int nums1[], int nums2[]){
         //here since we have to keep track of frequency of each no as well we will use a hashmap instead of a hashset
         HashMap<Integer,Integer> map = new HashMap<>();
