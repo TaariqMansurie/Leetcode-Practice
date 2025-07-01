@@ -77,35 +77,65 @@ class Solution{
 
 
 //optimal solution using two pointers
-public static List<List<Integer>> threeSum(int[] nums) {
-    List<List<Integer>> result = new ArrayList<>();
-    Arrays.sort(nums); // Sort the array
+// public static List<List<Integer>> threeSum(int[] nums) {
+//     List<List<Integer>> result = new ArrayList<>();
+//     Arrays.sort(nums); // Sort the array
 
-    for (int i = 0; i < nums.length - 2; i++) {
-        // Skip duplicates for the first number
-        if (i > 0 && nums[i] == nums[i - 1]) continue;
+//     for (int i = 0; i < nums.length - 2; i++) {
+//         // Skip duplicates for the first number
+//         if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+//         int target = -nums[i];
+//         int left = i + 1, right = nums.length - 1;
+
+//         while (left < right) {
+//             int sum = nums[left] + nums[right];
+//             if (sum == target) {
+//                 result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+
+//                 // Move pointers and skip duplicates
+//                 left++;
+//                 right--;
+//                 while (left < right && nums[left] == nums[left - 1]) left++;
+//                 while (left < right && nums[right] == nums[right + 1]) right--;
+//             } else if (sum < target) {
+//                 left++; // Increase sum
+//             } else {
+//                 right--; // Decrease sum
+//             }
+//         }
+//     }
+
+//     return result;
+// }
+
+public static List<List<Integer>> threeSum(int[] nums){
+    List<List<Integer>> result = new ArrayList<>();
+    Arrays.sort(nums);
+
+    for(int i=0; i<nums.length-2;i++){ //length -2 coz 3numbers ar eneeded
+        //skipping duplicates for first number
+        if(i>0 && nums[i]==nums[i-1]) continue;
 
         int target = -nums[i];
-        int left = i + 1, right = nums.length - 1;
-
-        while (left < right) {
+        int left = i+1, right = nums.length-1;
+        while(left < right){
             int sum = nums[left] + nums[right];
-            if (sum == target) {
+            if(sum == target){
                 result.add(Arrays.asList(nums[i], nums[left], nums[right]));
 
-                // Move pointers and skip duplicates
+                //now move pointers and just keep skipping duplicates
                 left++;
                 right--;
-                while (left < right && nums[left] == nums[left - 1]) left++;
-                while (left < right && nums[right] == nums[right + 1]) right--;
+                while(left < right && nums[left] == nums [left-1]) left++;
+                while(left < right && nums[right] == nums[right+1]) right --;
             } else if (sum < target) {
-                left++; // Increase sum
+                left++;
             } else {
-                right--; // Decrease sum
+                right--;
             }
         }
     }
-
     return result;
 }
 
