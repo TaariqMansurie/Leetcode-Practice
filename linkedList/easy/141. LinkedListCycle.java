@@ -12,7 +12,7 @@ package linkedList.easy;
  *     }
  * }
  */
-public class Solution {
+public class LinkedListCycle {
     public static class Node {
         int data;
         Node next;
