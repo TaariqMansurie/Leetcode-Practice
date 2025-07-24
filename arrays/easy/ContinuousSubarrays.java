@@ -14,7 +14,7 @@ public class ContinuousSubarrays {
                 currSum += nums[j];
 
                 for(int k = start; k<=end; k++){
-                    System.out.print(nums[k] + " ");
+                    System.out.print(nums[k] + " "); // printing subarray elements
                     //write logic for calculating sum of each elements of k( basically each subarray)
                     // currSum += nums[k];
                 }
