@@ -22,7 +22,7 @@ class Solution {
         Solution solution = new Solution();
 
         int[] nums1 = {1, 3, 5, 6};
-        System.out.println("Output: " + solution.searchInsert(nums1, 5)); // Output: 2
+        System.out.println("Output: " + solution.searchInsert(nums1, 7)); // Output: 2
 
         int[] nums2 = {1, 3, 5, 6};
         System.out.println("Output: " + solution.searchInsert(nums2, 2)); // Output: 1
