@@ -20,6 +20,7 @@ public class lowercaseVowels {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         System.out.println("The number of lower case vowels appearing in the string entered by the user are:" +countLowercase(str));
+        sc.close();
     }
     
 }
