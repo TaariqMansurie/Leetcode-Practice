@@ -38,3 +38,4 @@ public class majorityElement {
         // System.out.println("Majority Element: " + solution.majorityElement(nums2)); // Output: 2
     }
 }
+//
